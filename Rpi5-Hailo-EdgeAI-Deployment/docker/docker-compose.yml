@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  hailo-adas-app:
+    build: .
+    container_name: rpi5_hailo_container
+    devices:
+      - /dev/hailo0:/dev/hailo0  # Hailo AI HAT+'ı konteynera bağlar
+    volumes:
+      - .:/app
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: "host"
+    restart: always
