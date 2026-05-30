@@ -1,1 +1,6 @@
-
+{
+    "nms_threshold": 0.45,
+    "score_threshold": 0.5,
+    "max_predictions": 100,
+    "classes": 80
+}
